@@ -23,6 +23,7 @@
   "dependencies": {
     "@doubco/countries": "^1.1.9",
     "@pinia/nuxt": "^0.4.6",
+    "next-auth": "4.21.1",
     "pinia": "^2.0.30"
   }
 }
