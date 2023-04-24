@@ -22,7 +22,6 @@ export default defineNuxtConfig({
   },
   modules: [
     "@nuxtjs/color-mode",
-    "@nuxtjs/supabase",
     "@sidebase/nuxt-auth",
     "@nuxtjs/i18n",
     "nuxt-icon",

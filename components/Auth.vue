@@ -1,24 +1,9 @@
 <script setup>
 import { useAuthStore } from '~/stores/auth'
 
-const supabase = useSupabaseClient();
 const authStore = useAuthStore();
 const loading = ref(false);
 const email = ref("");
-
-const handleLogin = async () => {
-  try {
-    loading.value = true;
-    const { error, user } = await supabase.auth.signInWithOtp({ email: email.value });
-    if (error) throw error;
-    alert("Check your email for the login link!");
-  } catch (error) {
-    alert(error.error_description || error.message);
-  } finally {
-    loading.value = false;
-  }
-};
-
 </script>
 <template>
   <div class="flex flex-col items-center">
@@ -50,9 +35,8 @@ const handleLogin = async () => {
           class="text-blue-500 py-2 px-2 rounded-full -ml-2 hover:bg-blue-50 hover:text-blue-700">
           More providers
         </NuxtLink>
-        <button class="py-2 px-6 rounded-full text-white btn bg-black hover:opacity-80" type="submit"
-          :disabled="loading">
-          {{ loading? "Loading": "Send magic link" }}
+        <button class="py-2 px-6 rounded-full text-white btn bg-black hover:opacity-80" type="submit" :disabled="loading">
+          {{ loading ? "Loading" : "Send magic link" }}
         </button>
       </div>
     </div>
