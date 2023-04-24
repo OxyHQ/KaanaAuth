@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color: #243746;
+  --color-primary: #158876;
+  --color-secondary: #0e2233;
+  --bg: #f3f5f4;
+  --bg-secondary: #fff;
+  --border-color: #ddd
+}
+
+.dark {
+  --color: #ebf4f1;
+  --color-primary: #41b38a;
+  --color-secondary: #fdf9f3;
+  --bg: #091a28;
+  --bg-secondary: #071521;
+  --border-color: #0d2538
+}
+
+.sepia {
+  --color: #433422;
+  --color-secondary: #504231;
+  --bg: #f1e7d0;
+  --bg-secondary: #eae0c9;
+  --border-color: #ded0bf
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--color);
+  transition: background-color .3s
+}
+
+a {
+  color: var(--color-primary)
+}
+
+a,
+input,
+button,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: url(@/assets/images/hero-gradient.svg) 50% no-repeat;
+  background-image: conic-gradient(from 180deg at 50% 50%, rgba(36, 209, 101, .09) 0deg, rgba(226, 214, 54, .09) 55.3deg, rgba(254, 108, 91, .09) 120deg, rgba(204, 60, 203, .09) 165deg, rgba(159, 51, 253, .09) 213.75deg, rgba(24, 117, 243, .09) 288.12deg, rgba(22, 119, 240, .09) 320deg, rgba(36, 209, 101, .09) 360deg);
+background-color: var(--bg);
+}
